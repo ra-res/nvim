@@ -21,3 +21,6 @@ vim.o.hidden = true
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.updatetime = 300
+
+-- Global coc extensions
+vim.g.coc_global_extensions = {'coc-tssserver', 'coc-json', 'coc-snippets', '!node_modules'}
