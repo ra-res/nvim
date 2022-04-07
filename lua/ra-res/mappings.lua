@@ -1,5 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
 opts = { noremap = true } 
+keymap('i', 'jj', '<Esc>', opts)
+keymap('v', 'q', 'b', opts)
+keymap('v', 'b', 'q', opts)
 keymap('n', 'q', 'b', opts)
 keymap('n', 'b', 'q', opts)
 keymap('n', 'vs', ':vs<CR>', opts)
@@ -13,6 +16,3 @@ keymap('n', 'tk', ':tabnext<CR>', opts)
 keymap('n', 'tj', ':tabprev<CR>', opts)
 keymap('n', 'to', ':tabo<CR>', opts)
 keymap('n', '<C-S>', ':%s/', opts)
-
-
--- NERDTree

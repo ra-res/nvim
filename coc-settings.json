@@ -1,4 +1,5 @@
 {
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }
