@@ -40,6 +40,7 @@ packer.startup(function(use)
   use 'neoclide/coc-jest'
   -- use 'airblade/vim-rooter'
   use "ahmedkhalf/project.nvim"
+  use "lewis6991/impatient.nvim"
 
 
   -- Theme/Syntax
