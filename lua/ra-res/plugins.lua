@@ -13,6 +13,11 @@ local packer = require 'packer'
 
 packer.init {
   compile_path = vim.fn.stdpath('data') .. '/packer_compiled.lua',
+    display = {
+        open_fn = function()
+            return require("packer.util").float { border = "rounded" }
+        end,
+    }
 }
 
 packer.startup(function(use)
@@ -33,7 +38,9 @@ packer.startup(function(use)
   use 'tpope/vim-vinegar'
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'neoclide/coc-jest'
-  use 'airblade/vim-rooter'
+  -- use 'airblade/vim-rooter'
+  use "ahmedkhalf/project.nvim"
+
 
   -- Theme/Syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
