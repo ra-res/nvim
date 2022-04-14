@@ -1,10 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
 opts = { noremap = true } 
 keymap('i', 'jj', '<Esc>', opts)
-keymap('v', 'q', 'b', opts)
-keymap('v', 'b', 'q', opts)
-keymap('n', 'q', 'b', opts)
-keymap('n', 'b', 'q', opts)
 keymap('n', 'vs', ':vs<CR>', opts)
 keymap('n', 'sp', ':sp<CR>', opts)
 keymap('n', '<C-L>', '<C-W><C-L>', opts)
