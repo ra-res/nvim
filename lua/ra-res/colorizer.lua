@@ -4,10 +4,11 @@ if not status_ok then
   return
 end
 
-colorizer.setup {
-  'css';
-  'javascript';
-  html = {
-    mode = 'foreground';
-  }
-}
+colorizer.setup()
+-- {
+--   'css';
+--   'javascript';
+--   html = {
+--     mode = 'foreground';
+--   }
+-- }
