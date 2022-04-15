@@ -20,7 +20,7 @@ local diagnostics = {
 }
 
 lualine.setup{
-  options = { theme  = 'nightfly' },
+  options = { theme  = 'gruvbox-flat' },
   sections = {
     lualine_a = { branch, diagnostics },
     lualine_c = {
