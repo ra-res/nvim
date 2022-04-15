@@ -42,7 +42,7 @@ packer.startup(function(use)
   -- use 'airblade/vim-rooter'
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
-
+  use { 'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons' }
 
   -- Theme/Syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
