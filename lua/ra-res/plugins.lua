@@ -27,6 +27,7 @@ packer.startup(function(use)
   -- Telescope
   use { 'nvim-lua/telescope.nvim', requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } }
 
+
   -- Core
   use 'janko/vim-test'
   use 'preservim/nerdtree'
@@ -47,7 +48,8 @@ packer.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   use 'itchyny/lightline.vim'
-  use 'morhetz/gruvbox' 
+  use 'eddyekofo94/gruvbox-flat.nvim'
+  use 'norcalli/nvim-colorizer.lua'
 end)
 
 if is_first_time then
