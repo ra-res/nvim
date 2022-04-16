@@ -31,7 +31,7 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-require'nvim-tree'.setup {
+nvim_tree.setup {
   open_on_setup = true,
   sort_by = "name",
   git_hl = true,
