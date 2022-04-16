@@ -40,3 +40,8 @@ apt:
 ```console
 sudo apt install node
 ```
+
+## 'kyazdani42/nvim-web-devicons' plugin requires `Nerd Fonts`
+```console
+brew tap homebrew/cask-fonts && brew install --cask font-code-new-roman-nerd-font
+```
