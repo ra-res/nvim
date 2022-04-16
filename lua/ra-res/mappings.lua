@@ -1,5 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
-opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 
 -- Modes
 --   normal_mode = "n",
@@ -15,7 +15,7 @@ keymap('i', 'jj', '<Esc>', opts)
 keymap('n', 'vs', ':vs<CR>', opts)
 keymap('n', 'sp', ':sp<CR>', opts)
 
--- Navigate between window splits
+-- Navigate windows
 keymap('n', '<C-L>', '<C-W><C-L>', opts)
 keymap('n', '<C-H>', '<C-W><C-H>', opts)
 keymap('n', '<C-K>', '<C-W><C-K>', opts)
@@ -38,6 +38,8 @@ keymap('n', 'tn', ':tabnew<CR>', opts)
 keymap('n', 'tk', ':tabnext<CR>', opts)
 keymap('n', 'tj', ':tabprev<CR>', opts)
 keymap('n', 'to', ':tabo<CR>', opts)
+
+-- Nvim Tree
 keymap('n', '<C-t>', '<cmd>NvimTreeToggle<CR>', opts)
 keymap('n', '<C-f>', '<cmd>NvimTreeFindFileToggle<CR>', opts)
 
@@ -50,3 +52,19 @@ keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>
 keymap('n', '<leader>gs', "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
 keymap('n', '<leader>b', "<cmd>lua require('telescope.builtin').git_branches()<CR>", opts)
 keymap('n', '<leader>c', "<cmd>lua require('telescope.builtin').git_commits()<CR>", opts)
+
+
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+-- Move text up and down
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "p", '"_dP', opts)
+
+-- Git
+keymap("n", "<space>g", '<cmd>Git<CR>', opts)
+keymap("n", "<space>gd", '<cmd>Gdiff<CR>', opts)
+keymap("n", "<space>gc", '<cmd>Git commit<CR>', opts)
+keymap("n", "<space>gb", '<cmd>Git blame<CR>', opts)
