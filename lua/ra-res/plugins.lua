@@ -50,7 +50,6 @@ packer.startup(function(use)
   use 'ryanoasis/vim-devicons'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
-  use 'itchyny/lightline.vim'
   use 'eddyekofo94/gruvbox-flat.nvim'
   use 'norcalli/nvim-colorizer.lua'
 end)
