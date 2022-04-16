@@ -27,10 +27,10 @@ packer.startup(function(use)
   -- Telescope
   use { 'nvim-lua/telescope.nvim', requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } }
 
-
   -- Core
   use 'janko/vim-test'
-  use 'preservim/nerdtree'
+  -- use 'preservim/nerdtree'
+  use {'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
   use 'mbbill/undotree'
   use 'jiangmiao/auto-pairs'
   use 'tpope/vim-surround'
@@ -42,9 +42,12 @@ packer.startup(function(use)
   -- use 'airblade/vim-rooter'
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
-  use { 'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons' }
+  -- use { 'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons' }
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
 
   -- Theme/Syntax
+  use 'kyazdani42/nvim-web-devicons'
+  use 'ryanoasis/vim-devicons'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   use 'itchyny/lightline.vim'
