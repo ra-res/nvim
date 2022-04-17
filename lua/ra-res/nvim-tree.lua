@@ -36,6 +36,11 @@ nvim_tree.setup {
   sort_by = "name",
   git_hl = true,
   highlight_opened_files = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    ignore_list = {},
+  },
   view = {
     width = 30,
     height = 30,
