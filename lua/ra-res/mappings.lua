@@ -40,7 +40,7 @@ keymap('n', 'tj', ':tabprev<CR>', opts)
 keymap('n', 'to', ':tabo<CR>', opts)
 
 -- Nvim Tree
-keymap('n', '<C-t>', '<cmd>NvimTreeToggle<CR>', opts)
+-- keymap('n', '<C-t>', '<cmd>NvimTreeToggle<CR>', opts)
 keymap('n', '<C-f>', '<cmd>NvimTreeFindFileToggle<CR>', opts)
 
 -- Telescope
