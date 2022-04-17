@@ -45,3 +45,9 @@ sudo apt install node
 ```console
 brew tap homebrew/cask-fonts && brew install --cask font-code-new-roman-nerd-font
 ```
+
+####  Speedup key input
+
+```console
+xset r rate 220 40
+```
