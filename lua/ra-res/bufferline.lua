@@ -64,7 +64,7 @@ bufferline.setup {
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "thin", -- "slant" | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = true,
     always_show_bufferline = true,
     sort_by = 'insert_at_end',
@@ -73,97 +73,97 @@ bufferline.setup {
     --   return buffer_a.modified > buffer_b.modified
     -- end
   },
-  highlights = {
-    fill = {
-      guifg = { attribute = "fg", highlight = "#ff0000" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
-    background = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
+  -- highlights = {
+  --   fill = {
+  --     guifg = { attribute = "fg", highlight = "#ff0000" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --   },
+  --   -- background = {
+  --   --   guifg = { attribute = "fg", highlight = "TabLine" },
+  --   --   guibg = { attribute = "bg", highlight = "TabLine" },
+  --   -- },
 
     -- buffer_selected = {
     --   guifg = {attribute='fg',highlight='#ff0000'},
     --   guibg = {attribute='bg',highlight='#0000ff'},
     --   gui = 'none'
-    --   },
-    buffer_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
+    -- },
+  --   buffer_visible = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --   },
 
-    close_button = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
-   close_button_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
-    -- close_button_selected = {
-    --   guifg = {attribute='fg',highlight='TabLineSel'},
-    --   guibg ={attribute='bg',highlight='TabLineSel'}
-    --   },
+  --   close_button = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --   },
+  --  close_button_visible = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --   },
+  --   -- close_button_selected = {
+  --   --   guifg = {attribute='fg',highlight='TabLineSel'},
+  --   --   guibg ={attribute='bg',highlight='TabLineSel'}
+  --   --   },
 
-    tab_selected = {
-      guifg = { attribute = "fg", highlight = "Normal" },
-      guibg = { attribute = "bg", highlight = "Normal" },
-    },
-    tab = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
-    tab_close = {
-      -- guifg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
-      guifg = { attribute = "fg", highlight = "TabLineSel" },
-      guibg = { attribute = "bg", highlight = "Normal" },
-    },
+  --   tab_selected = {
+  --     guifg = { attribute = "fg", highlight = "Normal" },
+  --     guibg = { attribute = "bg", highlight = "Normal" },
+  --   },
+  --   tab = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --   },
+  --   tab_close = {
+  --     -- guifg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
+  --     guifg = { attribute = "fg", highlight = "TabLineSel" },
+  --     guibg = { attribute = "bg", highlight = "Normal" },
+  --   },
 
-    duplicate_selected = {
-      guifg = { attribute = "fg", highlight = "TabLineSel" },
-      guibg = { attribute = "bg", highlight = "TabLineSel" },
-      gui = "italic",
-    },
-    duplicate_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-      gui = "italic",
-    },
-    duplicate = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-      gui = "italic",
-    },
+  --   duplicate_selected = {
+  --     guifg = { attribute = "fg", highlight = "TabLineSel" },
+  --     guibg = { attribute = "bg", highlight = "TabLineSel" },
+  --     gui = "italic",
+  --   },
+  --   duplicate_visible = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --     gui = "italic",
+  --   },
+  --   duplicate = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --     gui = "italic",
+  --   },
 
-    modified = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
-    modified_selected = {
-      guifg = { attribute = "fg", highlight = "Normal" },
-      guibg = { attribute = "bg", highlight = "Normal" },
-    },
-    modified_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
+  --   modified = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --   },
+  --   modified_selected = {
+  --     guifg = { attribute = "fg", highlight = "Normal" },
+  --     guibg = { attribute = "bg", highlight = "Normal" },
+  --   },
+  --   modified_visible = {
+  --     guifg = { attribute = "fg", highlight = "TabLine" },
+  --     guibg = { attribute = "bg", highlight = "TabLine" },
+  --   },
 
-    separator = {
-      guifg = { attribute = "bg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
-    separator_selected = {
-      guifg = { attribute = "bg", highlight = "Normal" },
-      guibg = { attribute = "bg", highlight = "Normal" },
-    },
-    separator_visible = {
-      guifg = {attribute='bg',highlight='TabLine'},
-      guibg = {attribute='bg',highlight='TabLine'}
-    },
-    indicator_selected = {
-      guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
-      guibg = { attribute = "bg", highlight = "Normal" },
-    },
-  },
+    -- separator = {
+    --   guifg = { attribute = "bg", highlight = "#0000ff" },
+    --   guibg = { attribute = "bg", highlight = "#0000ff" },
+    -- },
+  --   separator_selected = {
+  --     guifg = { attribute = "bg", highlight = "Normal" },
+  --     guibg = { attribute = "bg", highlight = "Normal" },
+  --   },
+  --   separator_visible = {
+  --     guifg = {attribute='bg',highlight='TabLine'},
+  --     guibg = {attribute='bg',highlight='TabLine'}
+  --   },
+  --   indicator_selected = {
+  --     guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
+  --     guibg = { attribute = "bg", highlight = "Normal" },
+  --   },
+  -- },
 }
