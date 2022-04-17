@@ -87,5 +87,7 @@ vim.opt.wildignorecase = true
 vim.opt.smarttab = true
 vim.opt.mouse = 'a';
 vim.opt.encoding = 'utf-8';
+vim.opt.ttyfast = true;
+vim.opt.lazyredraw = true;
 
 require 'ra-res'
