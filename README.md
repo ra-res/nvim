@@ -78,3 +78,9 @@ To install coc.nvim LSP:
 ```
 :CocInstall coc-tsserver
 ```
+
+#### Speed up your keyboard
+
+```
+xset r rate 200
+```
