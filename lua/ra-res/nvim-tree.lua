@@ -32,7 +32,7 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-  open_on_setup = true,
+  open_on_setup = false,
   sort_by = "name",
   git_hl = true,
   highlight_opened_files = true,
