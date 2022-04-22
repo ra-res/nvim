@@ -12,7 +12,7 @@ end
 
 M.reload_config = function()
   for name,_ in pairs(package.loaded) do
-    if name:match('^trash') then
+    if name:match('^ra-res') then
       package.loaded[name] = nil
     end
   end
