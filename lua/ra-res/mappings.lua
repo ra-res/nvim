@@ -65,7 +65,7 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Git
-keymap("n", "<space>g", '<cmd>Git<CR>', opts)
+keymap("n", "<space>gg", '<cmd>Git<CR>', opts)
 keymap("n", "<space>gd", '<cmd>Gdiff<CR>', opts)
 keymap("n", "<space>gc", '<cmd>Git commit<CR>', opts)
 keymap("n", "<space>gb", '<cmd>Git blame<CR>', opts)
