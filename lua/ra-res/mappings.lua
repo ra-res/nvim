@@ -70,3 +70,7 @@ keymap("n", "<space>gd", '<cmd>Gdiff<CR>', opts)
 keymap("n", "<space>gc", '<cmd>Git commit<CR>', opts)
 keymap("n", "<space>gb", '<cmd>Git blame<CR>', opts)
 keymap("n", "<space>gp", '<cmd>Git push<CR>', opts)
+
+-- Test
+keymap("n", "<leader>te", "<cmd>TestNearest<CR>", opts)
+keymap("n", "<leader>tf", "<cmd>TestFile<CR>", opts)
