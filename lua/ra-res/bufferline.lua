@@ -55,7 +55,7 @@ bufferline.setup {
     --   end
     -- end,
     -- offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
-    offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "left"}}, -- text align = {text_align = "left" | "center" | "right"}
+    offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "left" } }, -- text align = {text_align = "left" | "center" | "right"}
     show_buffer_icons = true,
     show_buffer_close_icons = true,
     show_buffer_default_icon = true,
@@ -83,11 +83,11 @@ bufferline.setup {
   --   --   guibg = { attribute = "bg", highlight = "TabLine" },
   --   -- },
 
-    -- buffer_selected = {
-    --   guifg = {attribute='fg',highlight='#ff0000'},
-    --   guibg = {attribute='bg',highlight='#0000ff'},
-    --   gui = 'none'
-    -- },
+  -- buffer_selected = {
+  --   guifg = {attribute='fg',highlight='#ff0000'},
+  --   guibg = {attribute='bg',highlight='#0000ff'},
+  --   gui = 'none'
+  -- },
   --   buffer_visible = {
   --     guifg = { attribute = "fg", highlight = "TabLine" },
   --     guibg = { attribute = "bg", highlight = "TabLine" },
@@ -149,10 +149,10 @@ bufferline.setup {
   --     guibg = { attribute = "bg", highlight = "TabLine" },
   --   },
 
-    -- separator = {
-    --   guifg = { attribute = "bg", highlight = "#0000ff" },
-    --   guibg = { attribute = "bg", highlight = "#0000ff" },
-    -- },
+  -- separator = {
+  --   guifg = { attribute = "bg", highlight = "#0000ff" },
+  --   guibg = { attribute = "bg", highlight = "#0000ff" },
+  -- },
   --   separator_selected = {
   --     guifg = { attribute = "bg", highlight = "Normal" },
   --     guibg = { attribute = "bg", highlight = "Normal" },
