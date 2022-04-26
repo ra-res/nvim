@@ -33,7 +33,6 @@ vim.cmd 'au FocusGained,BufEnter * :silent! !'
 -- ====================================================================================
 -- Theme
 -- ====================================================================================
-
 vim.opt.termguicolors = true
 -- vim.g.gruvbox_flat_style = "dark"
 
@@ -66,9 +65,9 @@ vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.opt.shortmess:append('c')
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.signcolumn = 'yes'
 vim.opt.wrap = true
