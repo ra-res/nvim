@@ -37,8 +37,6 @@ packer.startup(function(use)
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-vinegar'
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use 'neoclide/coc-jest'
   -- use 'airblade/vim-rooter'
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
@@ -47,6 +45,28 @@ packer.startup(function(use)
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
 
+  -- Coc
+  -- use {'neoclide/coc.nvim', branch = 'release'}
+  -- use 'neoclide/coc-jest'
+
+  -- Cmp
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp" -- lsp completions
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
   -- Theme/Syntax
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
@@ -54,6 +74,7 @@ packer.startup(function(use)
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   use 'eddyekofo94/gruvbox-flat.nvim'
   use 'norcalli/nvim-colorizer.lua'
+  use "RRethy/vim-illuminate"
 end)
 
 if is_first_time then
