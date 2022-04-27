@@ -43,8 +43,9 @@ plugins like Treesitter, Telescope, and Lualine.
     - linux: `sudo apt install node`
 - [pynvim](https://nodejs.org)
     - `pip3 install pynvim`
-- [nerdfonts](nerdfonts.com)
-    - `brew tap homebrew/cask-fonts && brew install --cask font-code-new-roman-nerd-font`
+- [Hack Nerd Font](nerdfonts.com)
+    - mac: `brew tap homebrew/cask-fonts && brew install --cask font-code-new-roman-nerd-font`
+    - linux: download  `Hack Nerd Font` in your  `~/.fonts` directory and run `fc-cache -fv`
 
 ## Setup this nvim config
 
