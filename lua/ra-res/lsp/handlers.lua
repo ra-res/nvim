@@ -74,11 +74,11 @@ local function lsp_keymaps(bufnr)
   keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   keymap(bufnr, "n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
   keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-  keymap(bufnr, "n", "<leader>tt", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  keymap(bufnr, "n", "<leader>p", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
   -- turn virtual text on and off
-  keymap(bufnr, "n", "<F9>", "<cmd>lua vim.diagnostic.config({virtual_text=false})<CR>", opts)
-  keymap(bufnr, "n", "<F10>", "<cmd>lua vim.diagnostic.config({virtual_text=true})<CR>", opts)
+  keymap(bufnr, "n", "<F11>", "<cmd>lua vim.diagnostic.config({virtual_text=false})<CR>", opts)
+  keymap(bufnr, "n", "<F12>", "<cmd>lua vim.diagnostic.config({virtual_text=true})<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)
