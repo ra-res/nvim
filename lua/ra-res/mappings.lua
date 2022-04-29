@@ -36,9 +36,10 @@ keymap("n", "<C-x>", "<cmd>Bdelete!<CR>", opts)
 
 -- Navigate tabs
 keymap('n', 'tn', ':tabnew<CR>', opts)
+keymap('n', 'tx', ':tabclose<CR>', opts)
+keymap('n', 'to', ':tabo<CR>', opts)
 keymap('n', 'tk', ':tabnext<CR>', opts)
 keymap('n', 'tj', ':tabprev<CR>', opts)
-keymap('n', 'to', ':tabo<CR>', opts)
 
 -- Nvim Tree
 -- keymap('n', '<C-t>', '<cmd>NvimTreeToggle<CR>', opts)
@@ -50,7 +51,6 @@ keymap('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>
 keymap('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 keymap('n', '<leader>fz', "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", opts)
 keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
-keymap('n', '<leader>gs', "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
 keymap('n', '<leader>b', "<cmd>lua require('telescope.builtin').git_branches()<CR>", opts)
 keymap('n', '<leader>c', "<cmd>lua require('telescope.builtin').git_commits()<CR>", opts)
 
