@@ -14,27 +14,35 @@ vim.g['test#javascript#jest#options'] = '--watch'
 
 vim.cmd 'augroup colorscheme_opts'
 vim.cmd 'au!'
-vim.cmd 'au ColorScheme * hi Normal guibg=#282828'
+vim.cmd 'au ColorScheme * hi Normal guibg=#151515'
 vim.cmd 'au ColorScheme * hi SignColumn guibg=NONE'
 vim.cmd 'au ColorScheme * hi CursorColumn guibg=#404040'
 vim.cmd 'au ColorScheme * hi CursorLine guibg=#404040'
 vim.cmd 'au ColorScheme * hi CursorLineNr term=bold ctermfg=Yellow gui=bold guifg=Yellow'
+
 vim.cmd 'au ColorScheme * hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE'
 
 -- -- Float borders
--- vim.cmd 'au ColorScheme * hi NormalFloat guibg=NONE'
--- vim.cmd 'au ColorScheme * hi FloatBorder guibg=NONE guifg=#eeeeee'
--- vim.cmd 'au ColorScheme * hi ErrorFloat guibg=NONE'
--- vim.cmd 'au ColorScheme * hi WarningFloat guibg=NONE'
--- vim.cmd 'au ColorScheme * hi InfoFloat guibg=NONE'
--- vim.cmd 'au ColorScheme * hi HintFloat guibg=NONE'
+vim.cmd 'au ColorScheme * hi NormalFloat guibg=NONE'
+vim.cmd 'au ColorScheme * hi FloatBorder guibg=NONE guifg=#eeeeee'
+vim.cmd 'au ColorScheme * hi ErrorFloat guibg=NONE'
+vim.cmd 'au ColorScheme * hi WarningFloat guibg=NONE'
+vim.cmd 'au ColorScheme * hi InfoFloat guibg=NONE'
+vim.cmd 'au ColorScheme * hi HintFloat guibg=NONE'
 vim.cmd 'augroup END'
 vim.cmd 'au FocusGained,BufEnter * :silent! !'
 -- ====================================================================================
 -- Theme
 -- ====================================================================================
+
 vim.opt.termguicolors = true
--- vim.g.gruvbox_flat_style = "dark"
+vim.g.gruvbox_flat_style = "hard"
+vim.g.gruvbox_colors = { hint = "orange", error = "#ff0000" }
+vim.g.gruvbox_italic_functions = false
+vim.g.gruvbox_italic_keywords = false
+vim.g.gruvbox_italic_variables = false
+vim.g.gruvbox_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+vim.g.gruvbox_dark_float = true
 
 -- Safely call command to set colorscheme
 -- but do not stop execution
@@ -51,7 +59,7 @@ end
 -- ====================================================================================
 
 vim.opt.errorbells = false
-vim.opt.autoread = true 
+vim.opt.autoread = true
 vim.opt.smartcase = true
 vim.opt.showmatch = true
 vim.opt.showmode = false
