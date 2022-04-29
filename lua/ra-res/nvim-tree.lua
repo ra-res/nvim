@@ -34,8 +34,8 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup {
   open_on_setup = false,
   sort_by = "name",
-  git_hl = true,
-  highlight_opened_files = true,
+  -- git_hl = true,
+  -- highlight_opened_files = true,
   update_focused_file = {
     enable = true,
     update_cwd = true,
@@ -83,13 +83,13 @@ nvim_tree.setup {
     ignore = true,
     timeout = 400,
   },
- show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-  },
+ -- show_icons = {
+ --    git = 1,
+ --    folders = 1,
+ --    files = 1,
+ --    folder_arrows = 1,
+ --    tree_width = 30,
+ --  },
   actions = {
     use_system_clipboard = true,
     change_dir = {
