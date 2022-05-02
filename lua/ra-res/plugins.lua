@@ -35,7 +35,6 @@ packer.startup(function(use)
   use 'jiangmiao/auto-pairs'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
-  use 'tpope/vim-fugitive'
   use 'tpope/vim-vinegar'
   -- use 'airblade/vim-rooter'
   use "ahmedkhalf/project.nvim"
@@ -68,6 +67,10 @@ packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "ray-x/lsp_signature.nvim"
   -- use "glepnir/lspsaga.nvim"
+
+  -- Git
+  use 'tpope/vim-fugitive'
+  use "lewis6991/gitsigns.nvim"
 
   -- Theme/Syntax
   use 'kyazdani42/nvim-web-devicons'
