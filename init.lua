@@ -16,8 +16,8 @@ vim.cmd 'augroup colorscheme_opts'
 vim.cmd 'au!'
 vim.cmd 'au ColorScheme * hi Normal guibg=#1a1a1a'
 vim.cmd 'au ColorScheme * hi SignColumn guibg=NONE'
--- vim.cmd 'au ColorScheme * hi CursorColumn guibg=#404040'
--- vim.cmd 'au ColorScheme * hi CursorLine guibg=#404040'
+vim.cmd 'au ColorScheme * hi CursorColumn guibg=#1f1f1f'
+vim.cmd 'au ColorScheme * hi CursorLine guibg=#1f1f1f'
 vim.cmd 'au ColorScheme * hi CursorLineNr term=bold ctermfg=Yellow gui=bold guifg=Yellow'
 
 vim.cmd 'au ColorScheme * hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE'
@@ -79,8 +79,8 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.signcolumn = 'yes'
 vim.opt.wrap = true
--- vim.opt.cursorcolumn = true
--- vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.number = true
 vim.opt.relativenumber = true
