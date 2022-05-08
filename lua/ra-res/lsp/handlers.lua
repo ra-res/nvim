@@ -43,7 +43,7 @@ M.setup = function()
   })
 end
 
--- Update capabilities
+-- Attach Illuminate
 local function lsp_highlight_document(client)
   if client.resolved_capabilities.document_highlight then
     local status_ok, illuminate = pcall(require, "illuminate")
@@ -69,10 +69,10 @@ local function lsp_keymaps(bufnr)
   -- keymap(bufnr, "n", "<leader>rn", "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
   keymap(bufnr, "n", "<leader>.", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
   -- keymap(bufnr, "n", "<leader>.", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
-  -- keymap(bufnr, "n", "<leader>fl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
   keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-  keymap(bufnr, "n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
+  -- keymap(bufnr, "n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts) -- deprecated
+  keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   keymap(bufnr, "n", "<leader>p", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
