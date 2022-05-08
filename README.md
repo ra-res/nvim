@@ -3,7 +3,7 @@
 This is a configuration for Neovim. It's written in Lua, and uses modern
 plugins like Treesitter, Telescope, and Lualine.
 
-## Plugins (18/04/2022)
+## Plugins (08/05/2022)
 
 - [packer.nvim](https://github.com/wbthomason/packer.nvim)
 - [telescope.nvim](https://github.com/nvim-lua/telescope.nvim)
