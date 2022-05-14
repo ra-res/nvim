@@ -45,13 +45,13 @@ end
 
 -- Attach Illuminate
 local function lsp_highlight_document(client)
-  if client.resolved_capabilities.document_highlight then
-    local status_ok, illuminate = pcall(require, "illuminate")
-    if not status_ok then
-      return
-    end
-    illuminate.on_attach(client)
+  -- if client.server_capabilities.document_highlight then
+  local status_ok, illuminate = pcall(require, "illuminate")
+  if not status_ok then
+    return
   end
+  illuminate.on_attach(client)
+  -- end
 end
 
 -- Keymaps
@@ -74,7 +74,7 @@ local function lsp_keymaps(bufnr)
   -- keymap(bufnr, "n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts) -- deprecated
   keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-  keymap(bufnr, "n", "<leader>p", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  keymap(bufnr, "n", "<leader>p", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
 
   -- turn virtual text on and off
   keymap(bufnr, "n", "<F11>", "<cmd>lua vim.diagnostic.config({virtual_text=false})<CR>", opts)
@@ -83,8 +83,8 @@ end
 
 M.on_attach = function(client, bufnr)
   if client.name == "tsserver" or client.name == "jsonls" then
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
+    client.server_capabilities.document_formatting = false
+    client.server_capabilities.document_range_formatting = false
   end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
@@ -97,6 +97,8 @@ if not status_ok then
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 return M

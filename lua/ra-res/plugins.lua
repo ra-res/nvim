@@ -1,7 +1,6 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 local is_first_time = false
-
 -- Bootstrap packer.nvim - auto install on first-time setup
 if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
@@ -67,6 +66,7 @@ packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "ray-x/lsp_signature.nvim"
   -- use "glepnir/lspsaga.nvim"
+  use "b0o/SchemaStore.nvim"
 
   -- Git
   use 'tpope/vim-fugitive'
