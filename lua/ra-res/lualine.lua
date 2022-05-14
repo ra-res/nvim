@@ -64,6 +64,7 @@ local location = {
 
 lualine.setup({
 	options = {
+    globalstatus = true,
 		icons_enabled = true,
 		theme = "nightfly",
 		component_separators = { left = "", right = "" },
