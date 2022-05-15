@@ -42,6 +42,8 @@ packer.startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
+  use "matbme/JABS.nvim" -- buffers
+  use "karb94/neoscroll.nvim"
 
   -- Coc
   -- use {'neoclide/coc.nvim', branch = 'release'}

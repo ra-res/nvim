@@ -45,6 +45,8 @@ keymap('n', 'tj', ':tabprev<CR>', opts)
 -- keymap('n', '<C-t>', '<cmd>NvimTreeToggle<CR>', opts)
 keymap('n', '<C-f>', '<cmd>NvimTreeFindFileToggle<CR>', opts)
 
+keymap('n', '=', "<cmd>JABSOpen<CR>", {noremap = true, silent = true, nowait = true})
+
 -- Telescope
 keymap('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
 keymap('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
