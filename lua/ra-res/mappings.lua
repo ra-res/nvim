@@ -56,6 +56,9 @@ keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>
 keymap('n', '<leader>b', "<cmd>lua require('telescope.builtin').git_branches()<CR>", opts)
 keymap('n', '<leader>c', "<cmd>lua require('telescope.builtin').git_commits()<CR>", opts)
 
+keymap("n", "<F2>", ":e ~/Notes/<cr>", opts)
+keymap('n', '<F3>', "<cmd>Telescope resume<CR>", opts)
+
 
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
