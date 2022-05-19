@@ -45,7 +45,7 @@ keymap('n', 'tj', ':tabprev<CR>', opts)
 -- keymap('n', '<C-t>', '<cmd>NvimTreeToggle<CR>', opts)
 keymap('n', '<C-f>', '<cmd>NvimTreeFindFileToggle<CR>', opts)
 
-keymap('n', '=', "<cmd>JABSOpen<CR>", {noremap = true, silent = true, nowait = true})
+keymap('n', '=', "<cmd>JABSOpen<CR>", { noremap = true, silent = true, nowait = true })
 
 -- Telescope
 keymap('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
@@ -55,10 +55,15 @@ keymap('n', '<leader>fz', "<cmd>lua require('telescope.builtin').current_buffer_
 keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 keymap('n', '<leader>b', "<cmd>lua require('telescope.builtin').git_branches()<CR>", opts)
 keymap('n', '<leader>c', "<cmd>lua require('telescope.builtin').git_commits()<CR>", opts)
+keymap('n', '<leader>fr', "<cmd>Telescope resume<CR>", opts)
 
-keymap("n", "<F2>", ":e ~/Notes/<cr>", opts)
-keymap('n', '<F3>', "<cmd>Telescope resume<CR>", opts)
-
+-- Touble
+keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
+keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

@@ -1,9 +1,9 @@
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
 local is_first_time = false
 -- Bootstrap packer.nvim - auto install on first-time setup
 if fn.empty(fn.glob(install_path)) > 0 then
-  vim.cmd('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+  vim.cmd('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
   is_first_time = true
 end
 
@@ -12,11 +12,11 @@ local packer = require 'packer'
 
 packer.init {
   compile_path = vim.fn.stdpath('data') .. '/packer_compiled.lua',
-    display = {
-        open_fn = function()
-            return require("packer.util").float { border = "rounded" }
-        end,
-    }
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  }
 }
 
 packer.startup(function(use)
@@ -29,7 +29,7 @@ packer.startup(function(use)
   -- Core
   use 'janko/vim-test'
   -- use 'preservim/nerdtree'
-  use {'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
   use 'mbbill/undotree'
   use 'jiangmiao/auto-pairs'
   use 'tpope/vim-surround'
@@ -39,12 +39,18 @@ packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   -- use { 'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons' }
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons' }
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
   use "matbme/JABS.nvim" -- buffers
   use "karb94/neoscroll.nvim"
-
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
+  use { "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
   -- Coc
   -- use {'neoclide/coc.nvim', branch = 'release'}
   -- use 'neoclide/coc-jest'
@@ -78,7 +84,7 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+  use { 'hoob3rt/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use "lunarvim/darkplus.nvim"
   -- use 'eddyekofo94/gruvbox-flat.nvim'
   use 'norcalli/nvim-colorizer.lua'
