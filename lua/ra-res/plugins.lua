@@ -44,13 +44,8 @@ packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "matbme/JABS.nvim" -- buffers
   use "karb94/neoscroll.nvim"
-  use {
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-  }
-  use { "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-  }
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
+
   -- Coc
   -- use {'neoclide/coc.nvim', branch = 'release'}
   -- use 'neoclide/coc-jest'
@@ -83,12 +78,20 @@ packer.startup(function(use)
   -- Theme/Syntax
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
   use { 'hoob3rt/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
   use "lunarvim/darkplus.nvim"
   -- use 'eddyekofo94/gruvbox-flat.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use "RRethy/vim-illuminate"
+
+  -- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { "p00f/nvim-ts-rainbow" }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "windwp/nvim-ts-autotag"
+  use "romgrk/nvim-treesitter-context"
 end)
 
 if is_first_time then
