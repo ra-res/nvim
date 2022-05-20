@@ -84,16 +84,6 @@ nvim ~/.config/nvim/init.lua
 :PackerInstall
 ```
 
-## coc.nvim
-
-This configuration uses [coc.nvim](https://github.com/neoclide/coc.nvim) for
-intellisense.(TODO: use native LSP)
-
-To install coc.nvim LSP:
-```
-:CocInstall coc-tsserver
-```
-
 #### Speed up your keyboard
 
 ```
