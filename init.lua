@@ -31,6 +31,7 @@ vim.cmd 'au ColorScheme * hi InfoFloat guibg=NONE'
 vim.cmd 'au ColorScheme * hi HintFloat guibg=NONE'
 vim.cmd 'augroup END'
 vim.cmd 'au FocusGained,BufEnter * :silent! !'
+
 -- ====================================================================================
 -- Theme
 -- ====================================================================================
