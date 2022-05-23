@@ -3,6 +3,7 @@ if not status_ok then
   return
 end
 
+-- NOTE: To install new server, add it here!
 local servers = {
   "cssls",
   "cssmodules_ls",
@@ -13,6 +14,8 @@ local servers = {
   "sumneko_lua",
   "tsserver",
   "pyright",
+  "jdtls",
+  "ccls"
 }
 
 local settings = {
