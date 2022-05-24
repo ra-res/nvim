@@ -45,6 +45,7 @@ packer.startup(function(use)
   use "matbme/JABS.nvim" -- buffers
   use "karb94/neoscroll.nvim"
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
+  use { 'goolord/alpha-nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
   -- Coc
   -- use {'neoclide/coc.nvim', branch = 'release'}

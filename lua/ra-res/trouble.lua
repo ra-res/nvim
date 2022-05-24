@@ -2,6 +2,7 @@ local status_ok, trouble = pcall(require, "trouble")
 if not status_ok then
   return
 end
+local icons = require "ra-res.icons"
 
 trouble.setup {
   position = "bottom", -- position of the list can be: bottom, top, left, right
@@ -42,11 +43,11 @@ trouble.setup {
   auto_jump = { "lsp_definitions" }, -- for the given modes, automatically jump if there is only a single result
   signs = {
     -- icons / text used for a diagnostic
-    error = "",
-    warning = "",
-    hint = "",
-    information = "",
-    other = "﫠"
+    error = icons.diagnostics.Error,
+    warning = icons.diagnostics.Warning,
+    hint = icons.diagnostics.Hint,
+    information = icons.diagnostics.Information,
+    other = icons.diagnostics.Check
   },
   use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
 }
