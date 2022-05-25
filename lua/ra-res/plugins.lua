@@ -71,7 +71,7 @@ packer.startup(function(use)
   use "ray-x/lsp_signature.nvim"
   -- use "glepnir/lspsaga.nvim"
   use "b0o/SchemaStore.nvim"
-
+  use "jose-elias-alvarez/nvim-lsp-ts-utils"
   -- Git
   use 'tpope/vim-fugitive'
   use "lewis6991/gitsigns.nvim"
