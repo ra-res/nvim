@@ -15,7 +15,7 @@ local servers = {
   "tsserver",
   "pyright",
   "jdtls",
-  "ccls"
+  "ltex"
 }
 
 local settings = {
@@ -74,6 +74,11 @@ for _, server in pairs(servers) do
   if server == "emmet_ls" then
     local emmet_ls_opts = require "ra-res.lsp.settings.emmet_ls"
     opts = vim.tbl_deep_extend("force", emmet_ls_opts, opts)
+  end
+
+  if server == "tsserver" then
+    local tsserver_opts = require "ra-res.lsp.settings.tsserver"
+    opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
   end
 
   lspconfig[server].setup(opts)
