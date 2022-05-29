@@ -15,7 +15,9 @@ local servers = {
   "tsserver",
   "pyright",
   "jdtls",
-  "ltex"
+  "ltex",
+  "svelte",
+  "tailwindcss"
 }
 
 local settings = {
